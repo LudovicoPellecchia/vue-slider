@@ -34,7 +34,9 @@
                 <div class="thumbs">
                     <div class="prev" @click="prevClickEvent"></div>
                     <div class="next" @click="nextClickEvent"></div>
-                    <div class="thumb" v-bind:class="onClick === i ? 'active' : ''" @click="thumbClickEvent(i)" v-for="(singleImg, i) in bannerImgList">
+                    <div class="thumb" 
+                            v-bind:class="onClick === i ? 'active' : ''" 
+                            @click="thumbClickEvent(i)" v-for="(singleImg, i) in bannerImgList">
                         <img v-bind:src="singleImg" :alt="'Immagine #' + i">
                     </div>
                 </div>

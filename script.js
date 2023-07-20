@@ -1,6 +1,6 @@
 const app = Vue.createApp({
-    data(){
-        return{
+    data() {
+        return {
             bannerImgList: [
                 "img/01.webp",
                 "img/02.webp",
@@ -10,21 +10,26 @@ const app = Vue.createApp({
 
             ],
 
-            onClick: false
+            onClick: null
         }
 
 
     },
 
     methods: {
-        thumbClickEvent(currentImgIndex){
+        thumbClickEvent(currentImgIndex) {
 
-            
-            if (this.onClick = currentImgIndex){
-                onClick=true
-            }
+            this.onClick = currentImgIndex
+        },
 
+        prevClickEvent() {
+            this.onClick--
+        },
+        
+        nextClickEvent() {
+            this.onClick++
         }
+
 
     }
 })
