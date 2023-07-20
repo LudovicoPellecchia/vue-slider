@@ -9,11 +9,22 @@ const app = Vue.createApp({
                 "img/05.webp",
 
             ],
+
+            onClick: false
         }
+
 
     },
 
     methods: {
+        thumbClickEvent(currentImgIndex){
+
+            
+            if (this.onClick = currentImgIndex){
+                onClick=true
+            }
+
+        }
 
     }
 })
